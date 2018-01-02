@@ -1,4 +1,4 @@
-package com.dubovskyi.kafka;
+package com.dubovskyi.kafka.core;
 
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
