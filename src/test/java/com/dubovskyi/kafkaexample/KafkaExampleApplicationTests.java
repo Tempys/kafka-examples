@@ -38,10 +38,14 @@ public class KafkaExampleApplicationTests {
 
 
 	@Test
-	//@Ignore
+	@Ignore
 	public void setKafkaProducerTest1() {
-		NotificationEventDto eventDto = new NotificationEventDto(UUID.randomUUID().toString(),"1231234");
+		NotificationEventDto eventDto = new NotificationEventDto(UUID.randomUUID().toString(),"1",null,"1231234");
 
-		kafkaProducer.send(INPUT_QUEUE,eventDto,"1");
+		for(int i =0;i<=1;i++){
+			eventDto.setAuthkey(i+" "+(i%2));
+			kafkaProducer.send(INPUT_QUEUE,eventDto,(i%2)+"");
+		}
+
 	}
 }
