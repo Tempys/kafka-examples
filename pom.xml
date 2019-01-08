@@ -24,12 +24,19 @@
         <java.version>1.8</java.version>
 
         <avro.version>1.8.2</avro.version>
-        <confluent.version>4.0.0</confluent.version>
+        <confluent.version>5.0.0</confluent.version>
         <metrics.version>4.0.0</metrics.version>
         <feign.version>9.4.0</feign.version>
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.kafka/connect-json -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-json</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
